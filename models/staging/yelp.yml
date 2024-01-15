@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+    - name: yelpdts
+      database: postgres
+      schema: public
+      tables:
+          - name: yelpbusiness
+            description: businesses available in yelp platform. 
+          - name: yelpbusinessreviews
+            description: customers reviews for business in yelpbusiness table

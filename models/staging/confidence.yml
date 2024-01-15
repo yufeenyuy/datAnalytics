@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+    - name: confidts
+      database: postgres
+      schema: public
+      tables:
+          - name: Production_Data
+            description: Number of units of bread produced per bread type collected in books and later on written in excel
+          - name: Sales_Data
+            description: Number of bread packages sold to customers or retailers. Usaually it is from previous day production.
+          
