@@ -8,8 +8,8 @@ case
    when "Names" = 'Paul & Ubale' or "Names" = 'paul & Ubale' then 'paul & ubale'
    when "Names" = 'Unknown' or "Names" = 'unknown' then 'unknown'
    else "Names" end worker_name, 
-"Bread Command"::numeric should_sales,
-"Sold"::numeric is_sales,
-"Return"::numeric unsold,
-"Losses"::numeric unsold_damaged         
+nullif("Bread Command"::numeric,'NaN')::numeric should_sales,
+nullif("Sold"::numeric,'NaN')::numeric is_sales,
+nullif("Return"::numeric,'NaN')::numeric unsold,
+nullif("Losses"::numeric,'NaN')::numeric unsold_damaged         
 from {{ref("stg_sales")}}

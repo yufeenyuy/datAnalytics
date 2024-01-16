@@ -4,7 +4,7 @@ feeding
 from
 (select 
 production_date, 
-feeding,
+nullif(feeding,'NaN')::numeric feeding,
 row_number() over(partition by production_date)::integer rownum 
 from 
 (select 
