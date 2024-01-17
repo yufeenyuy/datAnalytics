@@ -16,3 +16,4 @@ from
 (select distinct production_date "date" from {{ref("pdtn_t1")}}
 union
 select distinct sales_date "date" from {{ref("sales_t1")}}) dt
+order by "date" asc

@@ -19,3 +19,4 @@ from
     local_300, special_100, special_150, special_200, special_400, special_500, special_800])::numeric as amount
 from {{ref("stg_pdtn")}}) t1
 where production_date not in ('1900-01-28','7030-01-26')
+order by production_date asc
