@@ -17,6 +17,6 @@ select
 from
 (select *,
 row_number() over(partition by "Date" order by "Date" desc)::integer rownum
-from {{source("confidts","Production_Data")}}
-where loaded_at = (select max(loaded_at) from {{source("confidts","Production_Data")}})) pdtn
+from {{source("confidts","production_data")}}
+where loaded_at = (select max(loaded_at) from {{source("confidts","production_data")}})) pdtn
 where rownum = 1

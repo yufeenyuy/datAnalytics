@@ -5,8 +5,8 @@ sources:
       database: postgres
       schema: public
       tables:
-          - name: Production_Data
+          - name: production_data
             description: Number of units of bread produced per bread type collected in books and later on written in excel
-          - name: Sales_Data
+          - name: sales_data
             description: Number of bread packages sold to customers or retailers. Usaually it is from previous day production.
           
