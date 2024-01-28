@@ -1,4 +1,3 @@
-
 select 
 sales_date,
 should_sales,
