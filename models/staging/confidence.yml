@@ -9,4 +9,6 @@ sources:
             description: Number of units of bread produced per bread type collected in books and later on written in excel
           - name: sales_data
             description: Number of bread packages sold to customers or retailers. Usaually it is from previous day production.
+          - name: cfa_exchangerate
+            description: Data illegally scraped from https://www.exchangerates.org.uk/Central-African-CFA-franc-XAF-currency-table.html
           

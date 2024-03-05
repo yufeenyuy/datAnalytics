@@ -1,5 +1,6 @@
 select 
-coalesce(nullif("Date",'NaT')::date,'2023-01-03')::date sales_date,
+coalesce(nullif("Date",'NaT')::date,
+(select (max(nullif("Date",'NaT')::date) + interval '1 day')::date from {{ref("stg_sales")}}))::date sales_date,
 case 
    when "Names" like '_onstantine' then 'constantine'
    when "Names" like '_brahi_' then 'ibrahim'
