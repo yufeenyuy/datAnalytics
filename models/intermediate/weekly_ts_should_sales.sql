@@ -3,3 +3,4 @@ select
 sum(should_sales)::numeric should_sales 
 from {{ref("sales_t1")}}
 group by endofweek
+order by endofweek desc
