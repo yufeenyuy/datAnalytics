@@ -1,0 +1,10 @@
+version: 2
+
+sources: 
+  - name: prototype
+    description: source data for fiege in preparation for the second round of my interview.
+    database: postgres
+    schema: fiege
+    tables:
+      - name: transport_data
+        description: Transport data for creating prototype in power bi
